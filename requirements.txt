@@ -1,0 +1,4 @@
+ollama
+termcolor
+google.generativeai
+python-dotenv

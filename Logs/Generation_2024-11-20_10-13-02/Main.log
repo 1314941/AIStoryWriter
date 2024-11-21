@@ -1,0 +1,456 @@
+[5 ] [2024-11-20_11-17-06] 创建 OLLAMA 接口
+[5 ] [2024-11-20_11-17-08] Story loaded successfully!
+[5 ] [2024-11-20_11-17-08] 读取step1已有小说参数
+[5 ] [2024-11-20_11-17-08] 读取step2已有小说参数
+[5 ] [2024-11-20_11-17-08] 读取step3已有小说参数
+[2 ] [2024-11-20_11-17-08] Creating Base Langchain For Chapter 1 Generation
+[4 ] [2024-11-20_11-17-08] 提取章节的大纲段落
+[4 ] [2024-11-20_11-17-08] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2455.8tok Context Length)
+[4 ] [2024-11-20_11-17-08] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-17-36] Generated Response in 27.4s (~89.62tok/s)
+[5 ] [2024-11-20_11-17-36] Wrote This Language Chain (0_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/0_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-17-36] 创建了章节的大纲段落
+[2 ] [2024-11-20_11-17-36] 完成了基础语言链的设置
+[2 ] [2024-11-20_11-17-36] Starting Scene-By-Scene Chapter Generation Pipeline
+[2 ] [2024-11-20_11-17-36] 将章节拆分为场景
+[4 ] [2024-11-20_11-17-36] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2645.6tok Context Length)
+[4 ] [2024-11-20_11-17-36] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-19-09] Generated Response in 92.51s (~28.6tok/s)
+[5 ] [2024-11-20_11-19-09] Wrote This Language Chain (1_SafeGenerateText.ChapterOutlineToScenes.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/1_SafeGenerateText.ChapterOutlineToScenes.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-19-09] 完成将章节拆分为场景
+[2 ] [2024-11-20_11-19-09] Starting ChapterScenes->JSON
+[4 ] [2024-11-20_11-19-09] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~1105.4tok Context Length)
+[4 ] [2024-11-20_11-19-09] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-20-15] Generated Response in 66.4s (~16.65tok/s)
+[5 ] [2024-11-20_11-20-15] Wrote This Language Chain (2_SafeGenerateText.SafeGenerateJSON.ScenesToJSON.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/2_SafeGenerateText.SafeGenerateJSON.ScenesToJSON.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-20-15] Finished ChapterScenes->JSON (2 Scenes Found)
+[2 ] [2024-11-20_11-20-15] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_11-20-15] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2637.8tok Context Length)
+[4 ] [2024-11-20_11-20-15] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-21-30] Generated Response in 75.22s (~35.07tok/s)
+[5 ] [2024-11-20_11-21-30] Wrote This Language Chain (3_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/3_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-21-30] 完成场景大纲到场景的转换
+[2 ] [2024-11-20_11-21-30] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_11-21-30] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2653.2tok Context Length)
+[4 ] [2024-11-20_11-21-30] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-25-03] Generated Response in 212.38s (~12.49tok/s)
+[5 ] [2024-11-20_11-25-03] Wrote This Language Chain (4_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/4_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-25-03] 完成场景大纲到场景的转换
+[2 ] [2024-11-20_11-25-03] Finished Scene-By-Scene Chapter Generation Pipeline
+[5 ] [2024-11-20_11-25-03] 正在生成初始章节（阶段2：角色发展） 1/6 (迭代次数 0)
+[4 ] [2024-11-20_11-25-03] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~1505.6tok Context Length)
+[4 ] [2024-11-20_11-25-03] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-26-13] Generated Response in 70.17s (~21.46tok/s)
+[5 ] [2024-11-20_11-26-13] Wrote This Language Chain (5_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/5_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-26-13] Finished Initial Generation For Initial Chapter (Stage 2: Character Development)  1/6
+[4 ] [2024-11-20_11-26-13] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~340.4tok Context Length)
+[4 ] [2024-11-20_11-26-13] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-26-30] Generated Response in 16.99s (~20.04tok/s)
+[5 ] [2024-11-20_11-26-30] Wrote This Language Chain (6_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/6_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-26-30] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~151.2tok Context Length)
+[4 ] [2024-11-20_11-26-30] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-26-34] Generated Response in 4.54s (~33.3tok/s)
+[5 ] [2024-11-20_11-26-34] Wrote This Language Chain (7_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/7_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-26-34] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~252.6tok Context Length)
+[4 ] [2024-11-20_11-26-34] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-26-34] Using Ollama JSON Format
+[4 ] [2024-11-20_11-26-40] Generated Response in 5.61s (~45.04tok/s)
+[5 ] [2024-11-20_11-26-40] Wrote This Language Chain (8_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/8_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-26-40] Done Generating Initial Chapter (Stage 2: Character Development)  1/6
+[5 ] [2024-11-20_11-26-40] Generating Initial Chapter (Stage 3: Dialogue) 1/6 (Iteration 0)
+[4 ] [2024-11-20_11-26-40] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~481.0tok Context Length)
+[4 ] [2024-11-20_11-26-40] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-27-37] Generated Response in 57.15s (~8.42tok/s)
+[5 ] [2024-11-20_11-27-37] Wrote This Language Chain (9_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/9_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-27-37] Finished Initial Generation For Initial Chapter (Stage 3: Dialogue)  1/6
+[4 ] [2024-11-20_11-27-37] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~360.4tok Context Length)
+[4 ] [2024-11-20_11-27-37] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-27-51] Generated Response in 14.31s (~25.19tok/s)
+[5 ] [2024-11-20_11-27-51] Wrote This Language Chain (10_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/10_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-27-51] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~151.2tok Context Length)
+[4 ] [2024-11-20_11-27-51] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-27-57] Generated Response in 5.78s (~26.18tok/s)
+[5 ] [2024-11-20_11-27-57] Wrote This Language Chain (11_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/11_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-27-57] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~239.4tok Context Length)
+[4 ] [2024-11-20_11-27-57] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-27-57] Using Ollama JSON Format
+[4 ] [2024-11-20_11-28-03] Generated Response in 5.96s (~40.18tok/s)
+[5 ] [2024-11-20_11-28-03] Wrote This Language Chain (12_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/12_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-28-03] Done Generating Initial Chapter (Stage 3: Dialogue)  1/6
+[4 ] [2024-11-20_11-28-03] Entering Feedback/Revision Loop (Stage 5) For Chapter 1/6
+[5 ] [2024-11-20_11-28-03] Prompting LLM To Critique Chapter
+[4 ] [2024-11-20_11-28-03] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~448.4tok Context Length)
+[4 ] [2024-11-20_11-28-03] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-28-50] Generated Response in 47.09s (~9.52tok/s)
+[5 ] [2024-11-20_11-28-50] Wrote This Language Chain (13_SafeGenerateText.GetFeedbackOnChapter.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/13_SafeGenerateText.GetFeedbackOnChapter.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-28-50] Finished Getting Chapter Feedback
+[5 ] [2024-11-20_11-28-50] Prompting LLM To Get Review JSON
+[4 ] [2024-11-20_11-28-50] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~411.0tok Context Length)
+[4 ] [2024-11-20_11-28-50] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-28-51] Generated Response in 0.86s (~480.7tok/s)
+[5 ] [2024-11-20_11-28-51] Wrote This Language Chain (14_SafeGenerateText.GetChapterRating.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/14_SafeGenerateText.GetChapterRating.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-28-51] Finished Getting Review JSON
+[5 ] [2024-11-20_11-28-51] Editor Determined IsComplete: True
+[4 ] [2024-11-20_11-28-51] Quality Standard Met, Exiting Feedback/Revision Loop (Stage 5) For Chapter 1/6
+[2 ] [2024-11-20_11-28-51] 章节字数: 1555
+[2 ] [2024-11-20_11-28-51] Creating Base Langchain For Chapter 2 Generation
+[4 ] [2024-11-20_11-28-51] 提取章节的大纲段落
+[4 ] [2024-11-20_11-28-51] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2455.8tok Context Length)
+[4 ] [2024-11-20_11-28-51] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-29-15] Generated Response in 23.57s (~104.2tok/s)
+[5 ] [2024-11-20_11-29-15] Wrote This Language Chain (15_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/15_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-29-15] 创建了章节的大纲段落
+[3 ] [2024-11-20_11-29-15] 正在创建上一章节的总结信息
+[4 ] [2024-11-20_11-29-15] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2879.4tok Context Length)
+[4 ] [2024-11-20_11-29-15] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-29-48] Generated Response in 33.41s (~86.19tok/s)
+[5 ] [2024-11-20_11-29-48] Wrote This Language Chain (16_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/16_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[3 ] [2024-11-20_11-29-48] 创建了上一章节的总结信息
+[2 ] [2024-11-20_11-29-48] 完成了基础语言链的设置
+[2 ] [2024-11-20_11-29-48] Starting Scene-By-Scene Chapter Generation Pipeline
+[2 ] [2024-11-20_11-29-48] 将章节拆分为场景
+[4 ] [2024-11-20_11-29-48] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2627.6tok Context Length)
+[4 ] [2024-11-20_11-29-48] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-30-45] Generated Response in 56.91s (~46.17tok/s)
+[5 ] [2024-11-20_11-30-45] Wrote This Language Chain (17_SafeGenerateText.ChapterOutlineToScenes.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/17_SafeGenerateText.ChapterOutlineToScenes.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-30-45] 完成将章节拆分为场景
+[2 ] [2024-11-20_11-30-45] Starting ChapterScenes->JSON
+[4 ] [2024-11-20_11-30-45] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~971.4tok Context Length)
+[4 ] [2024-11-20_11-30-45] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-31-31] Generated Response in 45.4s (~21.4tok/s)
+[5 ] [2024-11-20_11-31-31] Wrote This Language Chain (18_SafeGenerateText.SafeGenerateJSON.ScenesToJSON.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/18_SafeGenerateText.SafeGenerateJSON.ScenesToJSON.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-31-31] Finished ChapterScenes->JSON (1 Scenes Found)
+[2 ] [2024-11-20_11-31-31] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_11-31-31] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2707.0tok Context Length)
+[4 ] [2024-11-20_11-31-31] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-35-53] Generated Response in 262.74s (~10.3tok/s)
+[5 ] [2024-11-20_11-35-53] Wrote This Language Chain (19_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/19_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-35-53] 完成场景大纲到场景的转换
+[2 ] [2024-11-20_11-35-53] Finished Scene-By-Scene Chapter Generation Pipeline
+[5 ] [2024-11-20_11-35-53] 正在生成初始章节（阶段2：角色发展） 2/6 (迭代次数 0)
+[4 ] [2024-11-20_11-35-53] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~4254.8tok Context Length)
+[4 ] [2024-11-20_11-35-53] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-37-10] Generated Response in 77.21s (~55.11tok/s)
+[5 ] [2024-11-20_11-37-10] Wrote This Language Chain (20_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/20_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-37-10] Finished Initial Generation For Initial Chapter (Stage 2: Character Development)  2/6
+[4 ] [2024-11-20_11-37-10] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~254.4tok Context Length)
+[4 ] [2024-11-20_11-37-10] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-37-26] Generated Response in 15.17s (~16.77tok/s)
+[5 ] [2024-11-20_11-37-26] Wrote This Language Chain (21_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/21_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-37-26] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~133.2tok Context Length)
+[4 ] [2024-11-20_11-37-26] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-37-31] Generated Response in 5.2s (~25.63tok/s)
+[5 ] [2024-11-20_11-37-31] Wrote This Language Chain (22_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/22_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-37-31] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~245.6tok Context Length)
+[4 ] [2024-11-20_11-37-31] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-37-31] Using Ollama JSON Format
+[4 ] [2024-11-20_11-37-36] Generated Response in 5.14s (~47.82tok/s)
+[5 ] [2024-11-20_11-37-36] Wrote This Language Chain (23_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/23_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-37-36] Done Generating Initial Chapter (Stage 2: Character Development)  2/6
+[5 ] [2024-11-20_11-37-36] Generating Initial Chapter (Stage 3: Dialogue) 2/6 (Iteration 0)
+[4 ] [2024-11-20_11-37-36] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~3301.2tok Context Length)
+[4 ] [2024-11-20_11-37-36] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-39-11] Generated Response in 95.1s (~34.71tok/s)
+[5 ] [2024-11-20_11-39-11] Wrote This Language Chain (24_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/24_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-39-11] Finished Initial Generation For Initial Chapter (Stage 3: Dialogue)  2/6
+[4 ] [2024-11-20_11-39-11] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~385.6tok Context Length)
+[4 ] [2024-11-20_11-39-11] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-39-24] Generated Response in 13.22s (~29.17tok/s)
+[5 ] [2024-11-20_11-39-24] Wrote This Language Chain (25_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/25_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-39-24] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~133.2tok Context Length)
+[4 ] [2024-11-20_11-39-24] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-39-30] Generated Response in 5.84s (~22.82tok/s)
+[5 ] [2024-11-20_11-39-30] Wrote This Language Chain (26_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/26_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-39-30] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~226.0tok Context Length)
+[4 ] [2024-11-20_11-39-30] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-39-30] Using Ollama JSON Format
+[4 ] [2024-11-20_11-39-35] Generated Response in 5.26s (~42.93tok/s)
+[5 ] [2024-11-20_11-39-36] Wrote This Language Chain (27_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/27_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-39-36] Done Generating Initial Chapter (Stage 3: Dialogue)  2/6
+[4 ] [2024-11-20_11-39-36] Entering Feedback/Revision Loop (Stage 5) For Chapter 2/6
+[5 ] [2024-11-20_11-39-36] Prompting LLM To Critique Chapter
+[4 ] [2024-11-20_11-39-36] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~473.6tok Context Length)
+[4 ] [2024-11-20_11-39-36] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-40-34] Generated Response in 58.67s (~8.07tok/s)
+[5 ] [2024-11-20_11-40-34] Wrote This Language Chain (28_SafeGenerateText.GetFeedbackOnChapter.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/28_SafeGenerateText.GetFeedbackOnChapter.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-40-34] Finished Getting Chapter Feedback
+[5 ] [2024-11-20_11-40-34] Prompting LLM To Get Review JSON
+[4 ] [2024-11-20_11-40-34] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~436.2tok Context Length)
+[4 ] [2024-11-20_11-40-34] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-40-35] Generated Response in 0.93s (~471.11tok/s)
+[5 ] [2024-11-20_11-40-35] Wrote This Language Chain (29_SafeGenerateText.GetChapterRating.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/29_SafeGenerateText.GetChapterRating.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-40-35] Finished Getting Review JSON
+[5 ] [2024-11-20_11-40-35] Editor Determined IsComplete: True
+[4 ] [2024-11-20_11-40-35] Quality Standard Met, Exiting Feedback/Revision Loop (Stage 5) For Chapter 2/6
+[2 ] [2024-11-20_11-40-35] 章节字数: 1715
+[2 ] [2024-11-20_11-40-35] Creating Base Langchain For Chapter 3 Generation
+[4 ] [2024-11-20_11-40-35] 提取章节的大纲段落
+[4 ] [2024-11-20_11-40-35] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2455.8tok Context Length)
+[4 ] [2024-11-20_11-40-35] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-40-59] Generated Response in 23.76s (~103.36tok/s)
+[5 ] [2024-11-20_11-40-59] Wrote This Language Chain (30_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/30_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-40-59] 创建了章节的大纲段落
+[3 ] [2024-11-20_11-40-59] 正在创建上一章节的总结信息
+[4 ] [2024-11-20_11-40-59] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2902.0tok Context Length)
+[4 ] [2024-11-20_11-40-59] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-41-35] Generated Response in 35.95s (~80.73tok/s)
+[5 ] [2024-11-20_11-41-35] Wrote This Language Chain (31_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/31_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[3 ] [2024-11-20_11-41-35] 创建了上一章节的总结信息
+[2 ] [2024-11-20_11-41-35] 完成了基础语言链的设置
+[2 ] [2024-11-20_11-41-35] Starting Scene-By-Scene Chapter Generation Pipeline
+[2 ] [2024-11-20_11-41-35] 将章节拆分为场景
+[4 ] [2024-11-20_11-41-35] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2633.2tok Context Length)
+[4 ] [2024-11-20_11-41-35] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-43-00] Generated Response in 85.59s (~30.76tok/s)
+[5 ] [2024-11-20_11-43-00] Wrote This Language Chain (32_SafeGenerateText.ChapterOutlineToScenes.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/32_SafeGenerateText.ChapterOutlineToScenes.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-43-00] 完成将章节拆分为场景
+[2 ] [2024-11-20_11-43-00] Starting ChapterScenes->JSON
+[4 ] [2024-11-20_11-43-00] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~1093.4tok Context Length)
+[4 ] [2024-11-20_11-43-00] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-44-20] Generated Response in 79.8s (~13.7tok/s)
+[5 ] [2024-11-20_11-44-20] Wrote This Language Chain (33_SafeGenerateText.SafeGenerateJSON.ScenesToJSON.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/33_SafeGenerateText.SafeGenerateJSON.ScenesToJSON.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-44-20] Finished ChapterScenes->JSON (5 Scenes Found)
+[2 ] [2024-11-20_11-44-20] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_11-44-20] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2555.6tok Context Length)
+[4 ] [2024-11-20_11-44-20] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-45-15] Generated Response in 54.84s (~46.6tok/s)
+[5 ] [2024-11-20_11-45-15] Wrote This Language Chain (34_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/34_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-45-15] 完成场景大纲到场景的转换
+[2 ] [2024-11-20_11-45-15] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_11-45-15] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2613.4tok Context Length)
+[4 ] [2024-11-20_11-45-15] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-48-35] Generated Response in 200.31s (~13.05tok/s)
+[5 ] [2024-11-20_11-48-35] Wrote This Language Chain (35_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/35_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-48-35] 完成场景大纲到场景的转换
+[2 ] [2024-11-20_11-48-35] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_11-48-35] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2598.6tok Context Length)
+[4 ] [2024-11-20_11-48-35] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-51-09] Generated Response in 153.66s (~16.91tok/s)
+[5 ] [2024-11-20_11-51-09] Wrote This Language Chain (36_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/36_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-51-09] 完成场景大纲到场景的转换
+[2 ] [2024-11-20_11-51-09] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_11-51-09] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2603.0tok Context Length)
+[4 ] [2024-11-20_11-51-09] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-52-29] Generated Response in 80.1s (~32.5tok/s)
+[5 ] [2024-11-20_11-52-29] Wrote This Language Chain (37_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/37_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-52-29] 完成场景大纲到场景的转换
+[2 ] [2024-11-20_11-52-29] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_11-52-29] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2557.8tok Context Length)
+[4 ] [2024-11-20_11-52-29] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-53-15] Generated Response in 46.11s (~55.47tok/s)
+[5 ] [2024-11-20_11-53-15] Wrote This Language Chain (38_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/38_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-53-15] 完成场景大纲到场景的转换
+[2 ] [2024-11-20_11-53-15] Finished Scene-By-Scene Chapter Generation Pipeline
+[5 ] [2024-11-20_11-53-15] 正在生成初始章节（阶段2：角色发展） 3/6 (迭代次数 0)
+[4 ] [2024-11-20_11-53-15] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~5913.0tok Context Length)
+[4 ] [2024-11-20_11-53-15] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-55-40] Generated Response in 144.26s (~40.99tok/s)
+[5 ] [2024-11-20_11-55-40] Wrote This Language Chain (39_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/39_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-55-40] Finished Initial Generation For Initial Chapter (Stage 2: Character Development)  3/6
+[4 ] [2024-11-20_11-55-40] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~481.4tok Context Length)
+[4 ] [2024-11-20_11-55-40] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-56-14] Generated Response in 34.3s (~14.03tok/s)
+[5 ] [2024-11-20_11-56-14] Wrote This Language Chain (40_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/40_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-56-14] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~138.8tok Context Length)
+[4 ] [2024-11-20_11-56-14] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-56-19] Generated Response in 4.84s (~28.69tok/s)
+[5 ] [2024-11-20_11-56-19] Wrote This Language Chain (41_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/41_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_11-56-19] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~343.6tok Context Length)
+[4 ] [2024-11-20_11-56-19] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-56-19] Using Ollama JSON Format
+[4 ] [2024-11-20_11-56-28] Generated Response in 8.73s (~39.34tok/s)
+[5 ] [2024-11-20_11-56-28] Wrote This Language Chain (42_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/42_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-56-28] Done Generating Initial Chapter (Stage 2: Character Development)  3/6
+[5 ] [2024-11-20_11-56-28] Generating Initial Chapter (Stage 3: Dialogue) 3/6 (Iteration 0)
+[4 ] [2024-11-20_11-56-28] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~3916.8tok Context Length)
+[4 ] [2024-11-20_11-56-28] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_11-59-27] Generated Response in 179.32s (~21.84tok/s)
+[5 ] [2024-11-20_11-59-27] Wrote This Language Chain (43_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/43_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_11-59-27] Finished Initial Generation For Initial Chapter (Stage 3: Dialogue)  3/6
+[4 ] [2024-11-20_11-59-27] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~607.8tok Context Length)
+[4 ] [2024-11-20_11-59-27] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-00-02] Generated Response in 35.09s (~17.32tok/s)
+[5 ] [2024-11-20_12-00-02] Wrote This Language Chain (44_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/44_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_12-00-02] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~138.8tok Context Length)
+[4 ] [2024-11-20_12-00-02] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-00-07] Generated Response in 5.5s (~25.24tok/s)
+[5 ] [2024-11-20_12-00-07] Wrote This Language Chain (45_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/45_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_12-00-07] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~350.8tok Context Length)
+[4 ] [2024-11-20_12-00-07] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-00-07] Using Ollama JSON Format
+[4 ] [2024-11-20_12-00-17] Generated Response in 9.65s (~36.36tok/s)
+[5 ] [2024-11-20_12-00-17] Wrote This Language Chain (46_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/46_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-00-17] Done Generating Initial Chapter (Stage 3: Dialogue)  3/6
+[4 ] [2024-11-20_12-00-17] Entering Feedback/Revision Loop (Stage 5) For Chapter 3/6
+[5 ] [2024-11-20_12-00-17] Prompting LLM To Critique Chapter
+[4 ] [2024-11-20_12-00-17] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~695.8tok Context Length)
+[4 ] [2024-11-20_12-00-17] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-01-07] Generated Response in 49.87s (~13.95tok/s)
+[5 ] [2024-11-20_12-01-07] Wrote This Language Chain (47_SafeGenerateText.GetFeedbackOnChapter.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/47_SafeGenerateText.GetFeedbackOnChapter.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-01-07] Finished Getting Chapter Feedback
+[5 ] [2024-11-20_12-01-07] Prompting LLM To Get Review JSON
+[4 ] [2024-11-20_12-01-07] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~658.4tok Context Length)
+[4 ] [2024-11-20_12-01-07] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-01-08] Generated Response in 1.02s (~646.57tok/s)
+[5 ] [2024-11-20_12-01-08] Wrote This Language Chain (48_SafeGenerateText.GetChapterRating.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/48_SafeGenerateText.GetChapterRating.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-01-08] Finished Getting Review JSON
+[5 ] [2024-11-20_12-01-08] Editor Determined IsComplete: True
+[4 ] [2024-11-20_12-01-08] Quality Standard Met, Exiting Feedback/Revision Loop (Stage 5) For Chapter 3/6
+[2 ] [2024-11-20_12-01-08] 章节字数: 2805
+[2 ] [2024-11-20_12-01-08] Creating Base Langchain For Chapter 4 Generation
+[4 ] [2024-11-20_12-01-08] 提取章节的大纲段落
+[4 ] [2024-11-20_12-01-08] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2455.8tok Context Length)
+[4 ] [2024-11-20_12-01-08] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-01-27] Generated Response in 18.52s (~132.62tok/s)
+[5 ] [2024-11-20_12-01-27] Wrote This Language Chain (49_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/49_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_12-01-27] 创建了章节的大纲段落
+[3 ] [2024-11-20_12-01-27] 正在创建上一章节的总结信息
+[4 ] [2024-11-20_12-01-27] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~3124.2tok Context Length)
+[4 ] [2024-11-20_12-01-27] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-02-11] Generated Response in 44.13s (~70.8tok/s)
+[5 ] [2024-11-20_12-02-11] Wrote This Language Chain (50_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/50_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[3 ] [2024-11-20_12-02-11] 创建了上一章节的总结信息
+[2 ] [2024-11-20_12-02-11] 完成了基础语言链的设置
+[2 ] [2024-11-20_12-02-11] Starting Scene-By-Scene Chapter Generation Pipeline
+[2 ] [2024-11-20_12-02-11] 将章节拆分为场景
+[4 ] [2024-11-20_12-02-11] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2608.2tok Context Length)
+[4 ] [2024-11-20_12-02-11] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-03-40] Generated Response in 89.12s (~29.27tok/s)
+[5 ] [2024-11-20_12-03-40] Wrote This Language Chain (51_SafeGenerateText.ChapterOutlineToScenes.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/51_SafeGenerateText.ChapterOutlineToScenes.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-03-40] 完成将章节拆分为场景
+[2 ] [2024-11-20_12-03-40] Starting ChapterScenes->JSON
+[4 ] [2024-11-20_12-03-40] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~1103.2tok Context Length)
+[4 ] [2024-11-20_12-03-40] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-04-53] Generated Response in 73.23s (~15.06tok/s)
+[5 ] [2024-11-20_12-04-53] Wrote This Language Chain (52_SafeGenerateText.SafeGenerateJSON.ScenesToJSON.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/52_SafeGenerateText.SafeGenerateJSON.ScenesToJSON.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-04-53] Finished ChapterScenes->JSON (2 Scenes Found)
+[2 ] [2024-11-20_12-04-53] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_12-04-53] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2663.4tok Context Length)
+[4 ] [2024-11-20_12-04-53] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-06-52] Generated Response in 118.48s (~22.48tok/s)
+[5 ] [2024-11-20_12-06-52] Wrote This Language Chain (53_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/53_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-06-52] 完成场景大纲到场景的转换
+[2 ] [2024-11-20_12-06-52] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_12-06-52] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2666.8tok Context Length)
+[4 ] [2024-11-20_12-06-52] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-10-35] Generated Response in 223.48s (~11.93tok/s)
+[5 ] [2024-11-20_12-10-35] Wrote This Language Chain (54_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/54_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-10-35] 完成场景大纲到场景的转换
+[2 ] [2024-11-20_12-10-35] Finished Scene-By-Scene Chapter Generation Pipeline
+[5 ] [2024-11-20_12-10-35] 正在生成初始章节（阶段2：角色发展） 4/6 (迭代次数 0)
+[4 ] [2024-11-20_12-10-35] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~5587.6tok Context Length)
+[4 ] [2024-11-20_12-10-35] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-12-36] Generated Response in 121.35s (~46.05tok/s)
+[5 ] [2024-11-20_12-12-36] Wrote This Language Chain (55_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/55_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-12-36] Finished Initial Generation For Initial Chapter (Stage 2: Character Development)  4/6
+[4 ] [2024-11-20_12-12-36] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~415.2tok Context Length)
+[4 ] [2024-11-20_12-12-36] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-12-48] Generated Response in 11.89s (~34.93tok/s)
+[5 ] [2024-11-20_12-12-48] Wrote This Language Chain (56_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/56_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_12-12-48] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~113.8tok Context Length)
+[4 ] [2024-11-20_12-12-48] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-12-53] Generated Response in 4.25s (~26.79tok/s)
+[5 ] [2024-11-20_12-12-53] Wrote This Language Chain (57_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/57_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_12-12-53] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~207.0tok Context Length)
+[4 ] [2024-11-20_12-12-53] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-12-53] Using Ollama JSON Format
+[4 ] [2024-11-20_12-12-59] Generated Response in 5.92s (~34.99tok/s)
+[5 ] [2024-11-20_12-12-59] Wrote This Language Chain (58_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/58_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-12-59] Done Generating Initial Chapter (Stage 2: Character Development)  4/6
+[5 ] [2024-11-20_12-12-59] Generating Initial Chapter (Stage 3: Dialogue) 4/6 (Iteration 0)
+[4 ] [2024-11-20_12-12-59] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~4455.0tok Context Length)
+[4 ] [2024-11-20_12-12-59] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-14-45] Generated Response in 105.93s (~42.06tok/s)
+[5 ] [2024-11-20_12-14-45] Wrote This Language Chain (59_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/59_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-14-45] Finished Initial Generation For Initial Chapter (Stage 3: Dialogue)  4/6
+[4 ] [2024-11-20_12-14-45] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~363.6tok Context Length)
+[4 ] [2024-11-20_12-14-45] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-15-03] Generated Response in 18.8s (~19.34tok/s)
+[5 ] [2024-11-20_12-15-03] Wrote This Language Chain (60_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/60_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_12-15-03] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~113.8tok Context Length)
+[4 ] [2024-11-20_12-15-03] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-15-08] Generated Response in 4.84s (~23.51tok/s)
+[5 ] [2024-11-20_12-15-08] Wrote This Language Chain (61_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/61_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_12-15-08] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~255.0tok Context Length)
+[4 ] [2024-11-20_12-15-08] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-15-08] Using Ollama JSON Format
+[4 ] [2024-11-20_12-15-14] Generated Response in 6.31s (~40.44tok/s)
+[5 ] [2024-11-20_12-15-15] Wrote This Language Chain (62_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/62_SafeGenerateText.LLMSummaryCheck.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-15-15] Done Generating Initial Chapter (Stage 3: Dialogue)  4/6
+[4 ] [2024-11-20_12-15-15] Entering Feedback/Revision Loop (Stage 5) For Chapter 4/6
+[5 ] [2024-11-20_12-15-15] Prompting LLM To Critique Chapter
+[4 ] [2024-11-20_12-15-15] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~451.6tok Context Length)
+[4 ] [2024-11-20_12-15-15] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-16-13] Generated Response in 58.14s (~7.77tok/s)
+[5 ] [2024-11-20_12-16-13] Wrote This Language Chain (63_SafeGenerateText.GetFeedbackOnChapter.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/63_SafeGenerateText.GetFeedbackOnChapter.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-16-13] Finished Getting Chapter Feedback
+[5 ] [2024-11-20_12-16-13] Prompting LLM To Get Review JSON
+[4 ] [2024-11-20_12-16-13] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~414.2tok Context Length)
+[4 ] [2024-11-20_12-16-13] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-16-14] Generated Response in 0.95s (~435.58tok/s)
+[5 ] [2024-11-20_12-16-14] Wrote This Language Chain (64_SafeGenerateText.GetChapterRating.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/64_SafeGenerateText.GetChapterRating.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-16-14] Finished Getting Review JSON
+[5 ] [2024-11-20_12-16-14] Editor Determined IsComplete: True
+[4 ] [2024-11-20_12-16-14] Quality Standard Met, Exiting Feedback/Revision Loop (Stage 5) For Chapter 4/6
+[2 ] [2024-11-20_12-16-14] 章节字数: 1589
+[2 ] [2024-11-20_12-16-14] Creating Base Langchain For Chapter 5 Generation
+[4 ] [2024-11-20_12-16-14] 提取章节的大纲段落
+[4 ] [2024-11-20_12-16-14] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2455.8tok Context Length)
+[4 ] [2024-11-20_12-16-14] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-16-32] Generated Response in 17.97s (~136.63tok/s)
+[5 ] [2024-11-20_12-16-32] Wrote This Language Chain (65_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/65_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[4 ] [2024-11-20_12-16-32] 创建了章节的大纲段落
+[3 ] [2024-11-20_12-16-32] 正在创建上一章节的总结信息
+[4 ] [2024-11-20_12-16-32] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2880.0tok Context Length)
+[4 ] [2024-11-20_12-16-32] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-17-08] Generated Response in 36.79s (~78.28tok/s)
+[5 ] [2024-11-20_12-17-08] Wrote This Language Chain (66_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/66_SafeGenerateText.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[3 ] [2024-11-20_12-17-08] 创建了上一章节的总结信息
+[2 ] [2024-11-20_12-17-08] 完成了基础语言链的设置
+[2 ] [2024-11-20_12-17-08] Starting Scene-By-Scene Chapter Generation Pipeline
+[2 ] [2024-11-20_12-17-08] 将章节拆分为场景
+[4 ] [2024-11-20_12-17-08] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2601.8tok Context Length)
+[4 ] [2024-11-20_12-17-08] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-18-55] Generated Response in 106.65s (~24.39tok/s)
+[5 ] [2024-11-20_12-18-55] Wrote This Language Chain (67_SafeGenerateText.ChapterOutlineToScenes.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/67_SafeGenerateText.ChapterOutlineToScenes.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-18-55] 完成将章节拆分为场景
+[2 ] [2024-11-20_12-18-55] Starting ChapterScenes->JSON
+[4 ] [2024-11-20_12-18-55] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~1170.4tok Context Length)
+[4 ] [2024-11-20_12-18-55] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-20-23] Generated Response in 88.01s (~13.3tok/s)
+[5 ] [2024-11-20_12-20-23] Wrote This Language Chain (68_SafeGenerateText.SafeGenerateJSON.ScenesToJSON.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/68_SafeGenerateText.SafeGenerateJSON.ScenesToJSON.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-20-23] Finished ChapterScenes->JSON (4 Scenes Found)
+[2 ] [2024-11-20_12-20-23] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_12-20-23] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2594.0tok Context Length)
+[4 ] [2024-11-20_12-20-23] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-21-15] Generated Response in 51.59s (~50.28tok/s)
+[5 ] [2024-11-20_12-21-15] Wrote This Language Chain (69_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/69_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-21-15] 完成场景大纲到场景的转换
+[2 ] [2024-11-20_12-21-15] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_12-21-15] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2612.2tok Context Length)
+[4 ] [2024-11-20_12-21-15] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-22-39] Generated Response in 84.55s (~30.9tok/s)
+[5 ] [2024-11-20_12-22-39] Wrote This Language Chain (70_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/70_SafeGenerateText.SceneOutlineToScene.ChapterByScene.GenerateChapter.WriteChapters.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_12-22-39] 完成场景大纲到场景的转换
+[2 ] [2024-11-20_12-22-39] 开始场景大纲到场景的转换
+[4 ] [2024-11-20_12-22-39] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2595.6tok Context Length)
+[4 ] [2024-11-20_12-22-39] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_12-24-07] Generated Response in 87.51s (~29.66tok/s)
+[5 ] [2024-11-20_13-40-52] 创建 OLLAMA 接口
+[5 ] [2024-11-20_13-40-55] Story loaded successfully!
+[5 ] [2024-11-20_13-40-55] 读取step1已有小说参数
+[5 ] [2024-11-20_13-40-55] 读取step2已有小说参数
+[5 ] [2024-11-20_13-40-55] 读取step3已有小说参数
+[5 ] [2024-11-20_13-40-55] 读取step4已有小说参数
+[5 ] [2024-11-20_13-40-55] 整合章节
+[5 ] [2024-11-20_13-40-55] 生成信息
+[5 ] [2024-11-20_13-40-55] Prompting LLM To Generate Stats
+[4 ] [2024-11-20_13-40-55] Using Model 'novel:latest' from 'ollama@localhost:11434' | (Est. ~2486.2tok Context Length)
+[4 ] [2024-11-20_13-40-55] Using Ollama Model Options: {'num_ctx': 8192}
+[4 ] [2024-11-20_13-40-55] Using Ollama JSON Format
+[4 ] [2024-11-20_13-41-14] Generated Response in 19.12s (~130.01tok/s)
+[5 ] [2024-11-20_13-41-14] Wrote This Language Chain (0_SafeGenerateText.GetStoryInfo.GenerateInfo.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main) To Debug File Logs/Generation_2024-11-20_10-13-02/LangchainDebug/0_SafeGenerateText.GetStoryInfo.GenerateInfo.choice_to_continue.Main._run_code._run_module_code.run_path.run_file.main.Main._run_code._run_module_as_main.md
+[5 ] [2024-11-20_13-41-14] Finished Getting Stats Feedback
+[4 ] [2024-11-20_13-41-14] Story Total Word Count: 6374
+[3 ] [2024-11-20_13-41-14] 保存小说到磁盘
+[5 ] [2024-11-20_13-41-14] Wrote Story To Disk At Logs/Generation_2024-11-20_10-13-02/Story.md
