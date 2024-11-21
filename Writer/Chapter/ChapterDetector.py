@@ -7,6 +7,7 @@ import json
 
 def LLMCountChapters(Interface, _Logger, _Summary):
 
+<<<<<<< HEAD
     # 格式化提示信息
     Prompt = Writer.Prompts.CHAPTER_COUNT_PROMPT.format(_Summary=_Summary)
 
@@ -23,18 +24,34 @@ def LLMCountChapters(Interface, _Logger, _Summary):
     # 记录日志，完成获取章节数量JSON
     # _Logger.Log("Finished Getting ChapterCount JSON", 5)
     _Logger.Log("完成获取章节数量JSON", 5)
+=======
+    Prompt = Writer.Prompts.CHAPTER_COUNT_PROMPT.format(_Summary=_Summary)
+
+    _Logger.Log("Prompting LLM To Get ChapterCount JSON", 5)
+    Messages = []
+    Messages.append(Interface.BuildUserQuery(Prompt))
+    Messages = Interface.SafeGenerateText(
+        _Logger, Messages, Writer.Config.EVAL_MODEL, _Format="json"
+    )
+    _Logger.Log("Finished Getting ChapterCount JSON", 5)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 
     Iters: int = 0
 
     while True:
 
+<<<<<<< HEAD
         # 获取LLM生成的文本
         RawResponse = Interface.GetLastMessageText(Messages)
         # 去除文本中的反引号和json关键字
+=======
+        RawResponse = Interface.GetLastMessageText(Messages)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
         RawResponse = RawResponse.replace("`", "")
         RawResponse = RawResponse.replace("json", "")
 
         try:
+<<<<<<< HEAD
             # 计数器加1
             Iters += 1
             # 解析JSON，获取TotalChapters
@@ -67,3 +84,23 @@ def LLMCountChapters(Interface, _Logger, _Summary):
             # 记录日志，完成要求LLM进行修改
             # _Logger.Log("Done Asking LLM TO Revise JSON", 6)
             _Logger.Log("完成要求LLM进行修改JSON", 6)
+=======
+            Iters += 1
+            TotalChapters = json.loads(RawResponse)["TotalChapters"]
+            _Logger.Log("Got Total Chapter Count At {TotalChapters}", 5)
+            return TotalChapters
+        except Exception as E:
+            if Iters > 4:
+                _Logger.Log("Critical Error Parsing JSON", 7)
+                return -1
+            _Logger.Log("Error Parsing JSON Written By LLM, Asking For Edits", 7)
+            EditPrompt: str = (
+                f"Please revise your JSON. It encountered the following error during parsing: {E}. Remember that your entire response is plugged directly into a JSON parser, so don't write **anything** except pure json."
+            )
+            Messages.append(Interface.BuildUserQuery(EditPrompt))
+            _Logger.Log("Asking LLM TO Revise", 7)
+            Messages = Interface.SafeGenerateText(
+                _Logger, Messages, Writer.Config.EVAL_MODEL, _Format="json"
+            )
+            _Logger.Log("Done Asking LLM TO Revise JSON", 6)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16

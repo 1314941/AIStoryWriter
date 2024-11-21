@@ -9,7 +9,11 @@ import json
 import Writer.Config
 
 import Writer.Interface.Wrapper
+<<<<<<< HEAD
 import Writer.Logger
+=======
+import Writer.PrintUtils
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 import Writer.Chapter.ChapterDetector
 import Writer.Scrubber
 import Writer.Statistics
@@ -22,9 +26,13 @@ import Writer.Translator
 
 # Setup Argparser
 Parser = argparse.ArgumentParser()
+<<<<<<< HEAD
 Parser.add_argument("-Prompt",
                     default="prompt.txt", 
                     help="Path to file containing the prompt")
+=======
+Parser.add_argument("-Prompt", help="Path to file containing the prompt")
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 Parser.add_argument(
     "-Output",
     default="",
@@ -237,18 +245,29 @@ Models = [
 Models = list(set(Models))
 
 # Setup Logger
+<<<<<<< HEAD
 SysLogger = Writer.Logger.Logger()
 
 # Initialize Interface
 # SysLogger.Log("Created OLLAMA Interface", 5)
 SysLogger.Log("创建 OLLAMA 接口", 5)
+=======
+SysLogger = Writer.PrintUtils.Logger()
+
+# Initialize Interface
+SysLogger.Log("Created OLLAMA Interface", 5)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 Interface = Writer.Interface.Wrapper.Interface(Models)
 
 # Load User Prompt
 Prompt: str = ""
 if Args.Prompt is None:
     raise Exception("No Prompt Provided")
+<<<<<<< HEAD
 with open(Args.Prompt, "r", encoding="utf-8") as f:
+=======
+with open(Args.Prompt, "r") as f:
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
     Prompt = f.read()
 
 
@@ -267,14 +286,22 @@ BasePrompt = Prompt
 
 
 # Detect the number of chapters
+<<<<<<< HEAD
 # SysLogger.Log("Detecting Chapters", 5)
 SysLogger.Log("检测章节", 5)
+=======
+SysLogger.Log("Detecting Chapters", 5)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 Messages = [Interface.BuildUserQuery(Outline)]
 NumChapters: int = Writer.Chapter.ChapterDetector.LLMCountChapters(
     Interface, SysLogger, Interface.GetLastMessageText(Messages)
 )
+<<<<<<< HEAD
 # SysLogger.Log(f"Found {NumChapters} Chapter(s)", 5)
 SysLogger.Log(f"检测到 {NumChapters} 章", 5)
+=======
+SysLogger.Log(f"Found {NumChapters} Chapter(s)", 5)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 
 
 ## Write Per-Chapter Outline
@@ -317,8 +344,12 @@ if Writer.Config.EXPAND_OUTLINE:
 
 
 # Write the chapters
+<<<<<<< HEAD
 # SysLogger.Log("Starting Chapter Writing", 5)
 SysLogger.Log("开始写章节", 5)
+=======
+SysLogger.Log("Starting Chapter Writing", 5)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 Chapters = []
 for i in range(1, NumChapters + 1):
 
@@ -336,8 +367,12 @@ for i in range(1, NumChapters + 1):
     Chapter = f"### Chapter {i}\n\n{Chapter}"
     Chapters.append(Chapter)
     ChapterWordCount = Writer.Statistics.GetWordCount(Chapter)
+<<<<<<< HEAD
     # SysLogger.Log(f"Chapter Word Count: {ChapterWordCount}", 2)
     SysLogger.Log(f"章节字数: {ChapterWordCount}", 2)
+=======
+    SysLogger.Log(f"Chapter Word Count: {ChapterWordCount}", 2)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 
 
 # Now edit the whole thing together
@@ -360,8 +395,12 @@ if not Writer.Config.SCRUB_NO_SCRUB:
         Interface, SysLogger, NewChapters, NumChapters
     )
 else:
+<<<<<<< HEAD
     # SysLogger.Log(f"Skipping Scrubbing Due To Config", 4)
     SysLogger.Log(f"由于配置，跳过清理", 4)
+=======
+    SysLogger.Log(f"Skipping Scrubbing Due To Config", 4)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 StoryInfoJSON.update({"ScrubbedChapter": NewChapters})
 
 
@@ -371,8 +410,12 @@ if Writer.Config.TRANSLATE_LANGUAGE != "":
         Interface, SysLogger, NewChapters, NumChapters, Writer.Config.TRANSLATE_LANGUAGE
     )
 else:
+<<<<<<< HEAD
     # SysLogger.Log(f"No Novel Translation Requested, Skipping Translation Step", 4)
     SysLogger.Log(f"未请求小说翻译，跳过翻译步骤", 4)
+=======
+    SysLogger.Log(f"No Novel Translation Requested, Skipping Translation Step", 4)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 StoryInfoJSON.update({"TranslatedChapters": NewChapters})
 
 
@@ -446,8 +489,12 @@ StatsString += f" - Disable Scrubbing: {Writer.Config.SCRUB_NO_SCRUB}  \n"
 
 
 # Save The Story To Disk
+<<<<<<< HEAD
 # SysLogger.Log("Saving Story To Disk", 3)
 SysLogger.Log("保存小说到磁盘", 3)
+=======
+SysLogger.Log("Saving Story To Disk", 3)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 os.makedirs("Stories", exist_ok=True)
 FName = f"Stories/Story_{Title.replace(' ', '_')}"
 if Writer.Config.OPTIONAL_OUTPUT_NAME != "":

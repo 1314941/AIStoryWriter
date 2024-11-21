@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import Writer.Logger
+=======
+import Writer.PrintUtils
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 import Writer.Config
 import Writer.Prompts
 
 
+<<<<<<< HEAD
 #输出中文提示  方便查看效果   前往prompt中改成翻译为中文  ctrl+f搜索  TRANSLATE_PROMPT
 #另外，由于英语和汉语的差异，同样的意思，英语空格数会比中文多很多 默认的最低输出限制需要修改。  ctrl+f搜索  _MinWordCount   
 #比如，将200改为100  不太好掌控
@@ -11,6 +16,9 @@ import Writer.Prompts
 
 # 定义一个名为TranslatePrompt的函数，该函数接受四个参数：Interface，_Logger，_Prompt和_Language
 def TranslatePrompt(Interface, _Logger, _Prompt: str, _Language: str = "chinese"):
+=======
+def TranslatePrompt(Interface, _Logger, _Prompt: str, _Language: str = "French"):
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 
     Prompt: str = Writer.Prompts.TRANSLATE_PROMPT.format(
         _Prompt=_Prompt, _Language=_Language
@@ -27,7 +35,11 @@ def TranslatePrompt(Interface, _Logger, _Prompt: str, _Language: str = "chinese"
 
 
 def TranslateNovel(
+<<<<<<< HEAD
     Interface, _Logger, _Chapters: list, _TotalChapters: int, _Language: str = "chinese"
+=======
+    Interface, _Logger, _Chapters: list, _TotalChapters: int, _Language: str = "French"
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 ):
 
     EditedChapters = _Chapters

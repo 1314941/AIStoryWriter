@@ -8,7 +8,11 @@ import os
 
 import Writer.Interface.Wrapper
 import Writer.Config
+<<<<<<< HEAD
 import Writer.Logger
+=======
+import Writer.PrintUtils
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 
 
 
@@ -171,7 +175,11 @@ Writer.Config.OLLAMA_HOST = Args.Host
 StartTime_s = time.time()
 
 # Setup Logger
+<<<<<<< HEAD
 Logger = Writer.Logger.Logger("EvalLogs")
+=======
+Logger = Writer.PrintUtils.Logger("EvalLogs")
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 
 # Setup Logger
 Interface = Writer.Interface.Wrapper.Interface([Args.Model])

@@ -140,6 +140,7 @@ class Interface:
 
         NewMsg = self.ChatAndStreamResponse(_Logger, _Messages, _Model, _SeedOverride, _Format)
 
+<<<<<<< HEAD
         # while (self.GetLastMessageText(NewMsg).strip() == "") or (len(self.GetLastMessageText(NewMsg).split(" ")) < _MinWordCount):
         #中文没那么多空格，所以改成了len(_Messages)  识别字数
         while (self.GetLastMessageText(NewMsg).strip() == "") or (len(self.GetLastMessageText(NewMsg)) < _MinWordCount):
@@ -147,6 +148,12 @@ class Interface:
                 _Logger.Log("SafeGenerateText: Generation Failed Due To Empty (Whitespace) Response, Reattempting Output", 7)
             # elif (len(self.GetLastMessageText(NewMsg).split(" ")) < _MinWordCount):
             elif (len(self.GetLastMessageText(NewMsg)) < _MinWordCount):
+=======
+        while (self.GetLastMessageText(NewMsg).strip() == "") or (len(self.GetLastMessageText(NewMsg).split(" ")) < _MinWordCount):
+            if self.GetLastMessageText(NewMsg).strip() == "":
+                _Logger.Log("SafeGenerateText: Generation Failed Due To Empty (Whitespace) Response, Reattempting Output", 7)
+            elif (len(self.GetLastMessageText(NewMsg).split(" ")) < _MinWordCount):
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
                 _Logger.Log(f"SafeGenerateText: Generation Failed Due To Short Response ({len(self.GetLastMessageText(NewMsg).split(' '))}, min is {_MinWordCount}), Reattempting Output", 7)
 
             del _Messages[-1] # Remove failed attempt
@@ -161,6 +168,7 @@ class Interface:
         while True:
             Response = self.SafeGenerateText(_Logger, _Messages, _Model, _SeedOverride, _Format = "JSON")
             try:
+<<<<<<< HEAD
                 #去除空白字符
                 Response=self.GetLastMessageText(Response)
                 Response = Response.replace("`", "").replace("json", "")
@@ -168,6 +176,11 @@ class Interface:
                 # Check that it returned valid json
                 JSONResponse = json.loads(Response)
                 # JSONResponse = json.loads(self.GetLastMessageText(Response))
+=======
+
+                # Check that it returned valid json
+                JSONResponse = json.loads(self.GetLastMessageText(Response))
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 
                 # Now ensure it has the right attributes
                 for _Attrib in _RequiredAttribs:
@@ -396,8 +409,13 @@ class Interface:
             4,
         )
         # Check if the response is empty and attempt regeneration if necessary
+<<<<<<< HEAD
         if len(_Messages[-1]["content"]) == 0:
             _Logger.Log("Model Returned Only Whitespace(the length of the last message is 0), Attempting Regeneration", 6)
+=======
+        if _Messages[-1]["content"].strip() == "":
+            _Logger.Log("Model Returned Only Whitespace, Attempting Regeneration", 6)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
             _Messages.append(
                 self.BuildUserQuery(
                     "Sorry, but you returned an empty string, please try again!"

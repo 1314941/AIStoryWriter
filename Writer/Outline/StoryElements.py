@@ -1,19 +1,32 @@
+<<<<<<< HEAD
 import Writer.Feedback
 import Writer.Logger
+=======
+import Writer.LLMEditor
+import Writer.PrintUtils
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 import Writer.Config
 
 
 def GenerateStoryElements(Interface, _Logger, _OutlinePrompt):
 
+<<<<<<< HEAD
     # 定义一个字符串变量Prompt，用于存储故事元素的提示  不懂为何不放在Prompts.py里  
     Prompt: str = f"""
 我正在编写一部虚构的故事，希望能得到你的帮助来构思故事元素。
 
 这是我的故事提示。
+=======
+    Prompt: str = f"""
+I'm working on writing a fictional story, and I'd like your help writing out the story elements.
+
+Here's the prompt for my story.
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 <PROMPT>
 {_OutlinePrompt}
 </PROMPT>
 
+<<<<<<< HEAD
 请让你的回答遵循以下格式：
 
 <RESPONSE_TEMPLATE>
@@ -131,6 +144,127 @@ def GenerateStoryElements(Interface, _Logger, _OutlinePrompt):
 </RESPONSE_TEMPLATE>
 
 当然，不要包含XML标签 - 这些只是为了指示示例，并且应该从你的回答中省略。
+=======
+Please make your response have the following format:
+
+<RESPONSE_TEMPLATE>
+# Story Title
+
+## Genre
+- **Category**: (e.g., romance, mystery, science fiction, fantasy, horror)
+
+## Theme
+- **Central Idea or Message**:
+
+## Pacing
+- **Speed**: (e.g., slow, fast)
+
+## Style
+- **Language Use**: (e.g., sentence structure, vocabulary, tone, figurative language)
+
+## Plot
+- **Exposition**:
+- **Rising Action**:
+- **Climax**:
+- **Falling Action**:
+- **Resolution**:
+
+## Setting
+### Setting 1
+- **Time**: (e.g., present day, future, past)
+- **Location**: (e.g., city, countryside, another planet)
+- **Culture**: (e.g., modern, medieval, alien)
+- **Mood**: (e.g., gloomy, high-tech, dystopian)
+
+(Repeat the above structure for additional settings)
+
+## Conflict
+- **Type**: (e.g., internal, external)
+- **Description**:
+
+## Symbolism
+### Symbol 1
+- **Symbol**:
+- **Meaning**:
+
+(Repeat the above structure for additional symbols)
+
+## Characters
+### Main Character(s)
+#### Main Character 1
+- **Name**:
+- **Physical Description**:
+- **Personality**:
+- **Background**:
+- **Motivation**:
+
+(Repeat the above structure for additional main characters)
+
+
+### Supporting Characters
+#### Character 1
+- **Name**:
+- **Physical Description**:
+- **Personality**:
+- **Background**:
+- **Role in the story**:
+
+#### Character 2
+- **Name**:
+- **Physical Description**:
+- **Personality**:
+- **Background**:
+- **Role in the story**:
+
+#### Character 3
+- **Name**:
+- **Physical Description**:
+- **Personality**:
+- **Background**:
+- **Role in the story**:
+
+#### Character 4
+- **Name**:
+- **Physical Description**:
+- **Personality**:
+- **Background**:
+- **Role in the story**:
+
+#### Character 5
+- **Name**:
+- **Physical Description**:
+- **Personality**:
+- **Background**:
+- **Role in the story**:
+
+#### Character 6
+- **Name**:
+- **Physical Description**:
+- **Personality**:
+- **Background**:
+- **Role in the story**:
+
+#### Character 7
+- **Name**:
+- **Physical Description**:
+- **Personality**:
+- **Background**:
+- **Role in the story**:
+
+#### Character 8
+- **Name**:
+- **Physical Description**:
+- **Personality**:
+- **Background**:
+- **Role in the story**:
+
+(Repeat the above structure for additional supporting character)
+
+</RESPONSE_TEMPLATE>
+
+Of course, don't include the XML tags - those are just to indicate the example.
+Also, the items in parenthesis are just to give you a better idea of what to write about, and should also be omitted from your response.
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
     
     """
 
@@ -144,6 +278,7 @@ def GenerateStoryElements(Interface, _Logger, _OutlinePrompt):
     _Logger.Log(f"Done Generating Main Story Elements", 4)
 
     return Elements
+<<<<<<< HEAD
 
 
 
@@ -281,3 +416,5 @@ def GenerateStoryElements(Interface, _Logger, _OutlinePrompt):
     
 #     """
 
+=======
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16

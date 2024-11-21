@@ -1,7 +1,12 @@
 import json
 
+<<<<<<< HEAD
 import Writer.Feedback
 import Writer.Logger
+=======
+import Writer.LLMEditor
+import Writer.PrintUtils
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
 import Writer.Config
 import Writer.Prompts
 
@@ -12,9 +17,13 @@ def LLMSummaryCheck(Interface, _Logger, _RefSummary: str, _Work: str):
     """
 
     # LLM Length Check - Firstly, check if the length of the response was at least 100 words.
+<<<<<<< HEAD
     # if len(_Work.split(" ")) < 100:
     #检测字数
     if len(_Work) < 100:
+=======
+    if len(_Work.split(" ")) < 100:
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
         _Logger.Log(
             "Previous response didn't meet the length requirement, so it probably tried to cheat around writing.",
             7,

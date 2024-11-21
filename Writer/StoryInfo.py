@@ -4,6 +4,7 @@ import json
 
 def GetStoryInfo(Interface, _Logger, _Messages: list):
 
+<<<<<<< HEAD
     # 定义提示词
     Prompt: str = Writer.Prompts.STATS_PROMPT
 
@@ -26,10 +27,27 @@ def GetStoryInfo(Interface, _Logger, _Messages: list):
         # 获取最后一条消息的文本
         RawResponse = Interface.GetLastMessageText(Messages)
         # 替换文本中的反引号和json关键字
+=======
+    Prompt: str = Writer.Prompts.STATS_PROMPT
+
+    _Logger.Log("Prompting LLM To Generate Stats", 5)
+    Messages = _Messages
+    Messages.append(Interface.BuildUserQuery(Prompt))
+    Messages = Interface.SafeGenerateText(
+        _Logger, Messages, Writer.Config.INFO_MODEL, _Format="json"
+    )
+    _Logger.Log("Finished Getting Stats Feedback", 5)
+
+    Iters: int = 0
+    while True:
+
+        RawResponse = Interface.GetLastMessageText(Messages)
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
         RawResponse = RawResponse.replace("`", "")
         RawResponse = RawResponse.replace("json", "")
 
         try:
+<<<<<<< HEAD
             # 每次迭代增加一次
             Iters += 1
             # 将文本解析为字典
@@ -56,4 +74,22 @@ def GetStoryInfo(Interface, _Logger, _Messages: list):
                 _Logger, Messages, Writer.Config.INFO_MODEL, _Format="json"
             )
             # 记录日志，完成修改
+=======
+            Iters += 1
+            Dict = json.loads(RawResponse)
+            return Dict
+        except Exception as E:
+            if Iters > 4:
+                _Logger.Log("Critical Error Parsing JSON", 7)
+                return {}
+            _Logger.Log("Error Parsing JSON Written By LLM, Asking For Edits", 7)
+            EditPrompt: str = (
+                f"Please revise your JSON. It encountered the following error during parsing: {E}. Remember that your entire response is plugged directly into a JSON parser, so don't write **anything** except pure json."
+            )
+            Messages.append(Interface.BuildUserQuery(EditPrompt))
+            _Logger.Log("Asking LLM TO Revise", 7)
+            Messages = Interface.SafeGenerateText(
+                _Logger, Messages, Writer.Config.INFO_MODEL, _Format="json"
+            )
+>>>>>>> 25d675377e82f0bd0308ed630ebf25b2b7b41e16
             _Logger.Log("Done Asking LLM TO Revise JSON", 6)
